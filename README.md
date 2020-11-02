@@ -8,8 +8,8 @@ This project installs and configures Jenkins for you in a Docker container, with
 Short:
 1. Install [Docker](https://docs.docker.com/get-docker/)
 2. ```docker build -t robodemo .```
-3. * Linux/Mac: ```docker run -p 8080:8080 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --detach --name robodemo robodemo```
-    * Windows: ```docker run -p 8080:8080 -v jenkins_home://var/jenkins_home -v //var/run/docker.sock:/var/run/docker.sock --detach --name robodemo robodemo```
+3. * Linux/Mac: ```docker run -p 8080:8080 --env JAVA_OPTS=-Dhudson.model.DirectoryBrowserSupport.CSP= -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --detach --name robodemo robodemo```
+    * Windows: ```docker run -p 8080:8080 --env JAVA_OPTS=-Dhudson.model.DirectoryBrowserSupport.CSP= -v jenkins_home://var/jenkins_home -v //var/run/docker.sock:/var/run/docker.sock --detach --name robodemo robodemo```
 4. Open browser to http://localhost:8080
 5. Login with admin / RoboCorpRules2020!
 6. Click "robodemo" to open the demo project
