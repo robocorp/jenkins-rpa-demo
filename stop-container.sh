@@ -8,7 +8,7 @@ if [ $stop == "yes" ]; then
     
     docker stop robodemo
     docker rm robodemo
-    echo.
+    echo
     echo Container stopped
 
 else
