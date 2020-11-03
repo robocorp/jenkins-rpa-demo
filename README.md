@@ -7,15 +7,16 @@ This project installs and configures Jenkins for you in a Docker container, with
 ## Instructions
 Short:
 1. Install [Docker](https://docs.docker.com/get-docker/)
-2. ```docker build -t robodemo .```
-3. * Linux/Mac: ```docker run -p 8080:8080 --env JAVA_OPTS=-Dhudson.model.DirectoryBrowserSupport.CSP= -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --detach --name robodemo robodemo```
-    * Windows: ```docker run -p 8080:8080 --env JAVA_OPTS=-Dhudson.model.DirectoryBrowserSupport.CSP= -v jenkins_home://var/jenkins_home -v //var/run/docker.sock:/var/run/docker.sock --detach --name robodemo robodemo```
-4. Open browser to http://localhost:8080
-5. Login with admin / RoboCorpRules2020!
-6. Click "robodemo" to open the demo project
-7. Click Scan multibranch pipeline from the left-hand side
-8. Refresh, see that the job starts scanning first, then building the master branch
-9. Click to open the master, check the results. Click build #1 from left-hand side to see full console output and more information.
+1. Setup the docker
+   * Windows users: `get-started.bat`
+   * Linux/Mac: `./get-started.sh`
+   * Image building takes a while and ask you before starting the docker
+   * Follow the guides
+1. Once in the Jenkins click "robodemo" to open the demo project
+1. Click `Scan multibranch pipeline` from the left-hand side
+1. Refresh the Jenkins page and you should see that the job starts scanning first, then building the master branch
+1. Click to open the master, check the results. 
+   * Click build #1 from left-hand side to see full console output and more information.
 
 ## Details
 ### General
