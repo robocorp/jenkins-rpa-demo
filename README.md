@@ -9,7 +9,7 @@ Short:
 1. Install [Docker](https://docs.docker.com/get-docker/)
 1. Setup the docker
    * Windows users: `get-started.bat`
-   * Linux/Mac: `./get-started.sh`
+   * Linux/Mac: `chmod 755 get-started.sh` ->  `./get-started.sh`
    * Image building takes a while and ask you before starting the docker
    * Follow the guides
 1. Once in the Jenkins click "robodemo" to open the demo project
