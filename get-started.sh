@@ -13,7 +13,6 @@ if [ $update == "yes" ]; then
     echo
     echo Docker is now running open your browser: http://localhost:8080
     echo Login with admin / RoboCorpRules2020!
-
 else
     echo User cancelled
 fi
