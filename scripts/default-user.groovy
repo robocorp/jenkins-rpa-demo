@@ -17,4 +17,8 @@ if(!(jenkins.getAuthorizationStrategy() instanceof FullControlOnceLoggedInAuthor
 // username & password from environment variables
 def user = jenkins.getSecurityRealm().createAccount(env.JENKINS_USER, env.JENKINS_PASS)
 user.save()
+
+// Disable Plugin setup wizard for good
+jenkins.setInstallState(InstallState.INITIAL_SETUP_COMPLETED)
+
 jenkins.save()
