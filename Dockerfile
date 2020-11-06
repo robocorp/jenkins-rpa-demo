@@ -29,11 +29,9 @@ ENV JENKINS_PASS RoboCorpRules2020!
 #id_rsa.pub file will be saved at /root/.ssh/
 RUN ssh-keygen -f /root/.ssh/id_rsa -t rsa -N ''
 
-# allows to skip Jenkins setup wizard
-ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
+# Define JAVA_OPTS. Skip jenkins setup wizard, enable opening (robot) html files in browser.
+ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false -Dhudson.model.DirectoryBrowserSupport.CSP=
 
 # Jenkins runs all groovy files from init.groovy.d dir
 # use this for creating default admin user
 COPY scripts/*.groovy /usr/share/jenkins/ref/init.groovy.d/
-
-VOLUME /var/jenkins_home
